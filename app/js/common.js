@@ -7,6 +7,13 @@ $(function() {
 	return false;
 	});
 
+	//mouse-icon scroll
+	$(".mouse-icon").click(function(){
+		$("html, body").animate({
+			scrollTop : $(".s-adv").offset().top
+		}, 800);
+	});
+
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
