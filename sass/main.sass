@@ -57,6 +57,8 @@ body textarea:required:valid
 			font-size: 26px
 			color: #fff
 			font-family: "OpenSansLight", san-serif
+			.fa-play-circle
+				font-size: 50px
 
 .tizer-triangle
 	position: absolute
@@ -78,15 +80,125 @@ body textarea:required:valid
 		margin-top: 25px
 		width: 100%
 	h2
-		margin-top: 0
-		line-height: 1.2
+		text-align: left
 	p 
 		color: #777
 
 
+
+.home-gallery-wrap > a , .certificate-wrap > a
+	display: none
+	&:first-child
+		display: block
+
+
+//Mignific-Popup Customize
+.mfp-ready .mfp-figure
+	opacity: 0
+.mfp-zoom-in
+	.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+		opacity: 0
+		transition: all 0.3s ease-out
+		transform: scale(0.95)
+	&.mfp-bg, .mfp-preloader
+		opacity: 0
+		transition: all 0.3s ease-out
+	&.mfp-image-loaded .mfp-figure
+		opacity: 1
+		transform: scale(1)
+	&.mfp-ready
+		.mfp-iframe-holder .mfp-iframe-scaler
+			opacity: 1
+			transform: scale(1)
+		&.mfp-bg, .mfp-preloader
+			opacity: 0.8
+	&.mfp-removing
+		.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+			transform: scale(0.95)
+			opacity: 0
+		&.mfp-bg, .mfp-preloader
+			opacity: 0
+
+.mfp-iframe-scaler
+	overflow: visible
+.mfp-zoom-out-cur
+	cursor: auto
+	.mfp-image-holder .mfp-close
+		cursor: pointer
+.mfp-preloader
+	width: 30px !important
+	height: 30px !important
+	background-color: $accent
+	opacity: 0.65
+	margin: 0 auto
+	animation: rotateplane 1.2s infinite ease-in-out
+@-webkit-keyframes rotateplane
+	0%
+		-webkit-transform: perspective(120px)
+	50%
+		-webkit-transform: perspective(120px) rotateY(180deg)
+	100%
+		-webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+@keyframes rotateplane
+	0%
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+	50%
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+	100%
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
+
+
+
+.item-vertical
+	svg
+		width: 74px
+		height: auto
+	path
+		fill: #555 !important
+		+mt(.5s)
+	&:hover
+		path
+			fill: $accent !important
+		h3
+			&::before
+				background-color: $accent
+				width: 30%
+				margin-left: -15%
+		.button
+			box-shadow: 0 2px 0 darken($accent, 6%)
+			background-color: $accent
+			color: #fff
+			&:active, &:focus
+				background-color: darken ($accent, 6%)
+				box-shadow: 0 2px 0 darken($accent, 6%)
+	margin-top: 80px
+	text-align: center
+	h3
+		margin-top: 30px
+		position: relative
+		padding-bottom: 8px
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0
+			height: 1px
+			width: 15%
+			left: 50%
+			margin-left: -7.5%
+			background-color: #d0d0d0
+			+mt(.5s)
+	p 
+		font-size: 13px
+		padding: 0 14px
+		margin-top: 25px
+		margin-bottom: 35px
+
+	
+		
 //ALWAYS END
 @import media
 
 //Load Libs SASS
 @import app/libs/animate/animate.sass
 @import app/libs/fontawesome/css/font-awesome.min.sass
+@import app/libs/magnific-popup/magnific-popup.sass

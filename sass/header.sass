@@ -209,6 +209,21 @@ ul.home-list
 		background-color: darken($btn, 6%)
 		transform: translateY(3px)
 
+.button-small
+	padding: 6px 22px
+	font-size: 12px
+	box-shadow: 0 2px 0 darken($accent, 6%)
+	background-color: $accent
+	&:hover
+		background-color: lighten($accent, 6%)
+	&:active, &:focus
+		background-color: darken($accent, 6%)
+
+.button-gray
+	color: #666
+	background-color: #e8e8e8
+	box-shadow: 0 2px 0 darken(#e8e8e8, 6%)
+
 .button-accent
 	background-color: transparent
 	border: 1px solid $accent
@@ -289,6 +304,10 @@ ul.home-list
 
 .s-wide
 	padding: 80px 0
+	h2
+		text-align: center
+		margin-top: 0
+		line-height: 1.2
 
 .s-dark
 	background-color: $blue
@@ -309,7 +328,7 @@ ul.home-list
 	 	color: #dde9f3
 	 	font-family: "Exo2Bold", sans-serif
 	span
-		font-size: 34px
+		font-size: 22px
 		color: $accent
 	p 
 		margin: 12px 0 0
