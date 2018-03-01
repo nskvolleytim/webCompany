@@ -165,13 +165,13 @@ body textarea:required:valid
 				width: 30%
 				margin-left: -15%
 		.button
-			box-shadow: 0 2px 0 darken($accent, 6%)
+			box-shadow: 0 3px 0 darken($accent, 6%)
 			background-color: $accent
 			color: #fff
 			&:active, &:focus
 				background-color: darken ($accent, 6%)
-				box-shadow: 0 2px 0 darken($accent, 6%)
-	margin-top: 80px
+				box-shadow: 0 3px 0 darken($accent, 6%)
+	margin-top: 60px
 	text-align: center
 	h3
 		margin-top: 30px
@@ -191,7 +191,7 @@ body textarea:required:valid
 		font-size: 13px
 		padding: 0 14px
 		margin-top: 25px
-		margin-bottom: 35px
+		margin-bottom: 50px
 
 	
 .s-works
@@ -298,6 +298,125 @@ body textarea:required:valid
 .mfp-wrap ~ *
 	filter: blur(3px)
 
+
+.s-equipment
+	h2
+		margin-bottom: 70px
+
+
+.carousel-wrap
+	box-shadow: #d7d7d7 0 0 0 5px inset
+	text-align: center
+	background-color: #f8f8f8
+	padding: 0 0 30px
+	+mt(.25s)
+	margin-bottom: 25px
+	&:hover
+		box-shadow: $accent 0 0 0 5px inset
+		background-color: #ebebeb
+		.button
+			box-shadow: 0 3px 0 darken($accent, 6%)
+			background-color: $accent
+			color: #fff
+			&:active, &:focus
+				background-color: darken ($accent, 6%)
+				box-shadow: 0 3px 0 darken($accent, 6%)
+		.car-img-wrap
+			svg
+				path
+					fill: $accent !important
+					opacity: 1
+	.car-img-wrap
+		position: relative
+		svg, .img-svg
+			position: absolute
+			max-height: 50px
+			left: 2px
+			top: 25px
+			path
+				fill: #fff !important
+				opacity: 0.8
+				+mt(.25s)
+	h3
+		font-size: 17px
+		font-family: "OpenSansBold", san-serif
+	p 
+		font-size: 13px
+		color: #444
+		margin-bottom: 60px
+	.button
+		margin-top: 50px
+	.carousel-text
+		padding: 0 22px
+
+
+
+.carousel-eq
+	.carousel-wrap
+		margin: 15px
+	.owl-dots
+		text-align: center
+		margin-top: 40px
+		.owl-dot
+			width: 14px 
+			height: 14px
+			background-color: #d7d7d7
+			border-radius: 10em
+			display: inline-block
+			margin: 3px
+			&.active
+				background-color: $accent
+
+
+.tizer-text
+	font-family: "OpenSansLight", sans-serif
+	font-size: 19px
+	margin-bottom: 50px
+
+
+.item-vertical-2
+	margin-top: 50px
+	&:hover
+		.rounded-img-wrap
+			transform: scale(1.15)
+		.iv-phone
+			color: $accent
+	text-align: center
+	h3
+		font-size: 17px
+		font-family: "OpenSansBold", sans-serif
+		color: #444
+		margin-top: 40px
+		margin-bottom: 10px
+	p 
+		color: #666
+		font-size: 13px
+		letter-spacing: 2px
+		margin-top: 0
+
+.iv-phone
+	font-family: "Exo2Bold", sans-serif
+	color: #999
+	font-size: 17px
+	+mt(.5s)
+	margin-top: 24px
+	i
+		font-size: 18px
+		margin-right: 5px
+
+
+.rounded-img-wrap
+	border-radius: 10em
+	border: $accent 6px solid
+	overflow: hidden
+	width: 125px
+	height: 125px
+	text-align: center
+	margin: auto
+	+mt(.5s)
+	img
+		max-width: 100%
+
 //ALWAYS END
 @import media
 
@@ -305,3 +424,5 @@ body textarea:required:valid
 @import app/libs/animate/animate.sass
 @import app/libs/fontawesome/css/font-awesome.min.sass
 @import app/libs/magnific-popup/magnific-popup.sass
+@import app/libs/owl-carousel/assets/owl.carousel.sass
+

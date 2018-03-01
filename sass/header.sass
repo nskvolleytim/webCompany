@@ -204,7 +204,8 @@ ul.home-list
 		color: #fff
 		text-decoration: none
 	&:hover
-		background-color: lighten($btn, 6%)     
+		background-color: lighten($btn, 6%)
+		box-shadow: 0 3px 0 darken($btn, 6%)     
 	&:active
 		background-color: darken($btn, 6%)
 		transform: translateY(3px)
@@ -232,12 +233,21 @@ ul.home-list
 	font-family: "OpenSansSemiBold", sans-serif
 	&:hover
 		background-color: lighten($accent, 6%)
+		box-shadow: 0 2px 0 darken($accent, 6%)
 	&:active, &:focus
 		background-color: darken($accent, 6%)
+		box-shadow: 0 2px 0 darken($accent, 6%)
 
 
 .responsive-img
 	max-width: 100%
+
+.responsive-img-carousel
+	width: 100%
+
+.text-center
+	text-align: center
+
 
 .hidden
 	display: none
