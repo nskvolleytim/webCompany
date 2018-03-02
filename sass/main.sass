@@ -461,6 +461,66 @@ body textarea:required:valid
 				max-height: 40px
 				display: inline-block
 
+
+.s-testimonials
+	h2
+		margin-bottom: 60px
+
+.testimonials-item
+	text-align: center
+	font-size: 14px
+	margin-top: 20px
+	&:hover
+		.rounded-img-wrap
+			border-color: $accent
+		.testimonials-head
+			h4
+				color: $accent
+		.testimonials-desc
+			border-bottom: 5px solid $accent
+	.rounded-img-wrap
+		width: 98px
+		height: 98px
+		border: #fff 5px solid
+		box-shadow: rgba(0,0,0,.15) 0 0 5px
+	.testimonials-head
+		h4 	
+			font-size: 16px
+			font-family: "OpenSansBold", sans-serif
+			margin-top: 35px
+			margin-bottom: 12px
+			+mt(.5s)
+		p
+			font-size: 15px
+			letter-spacing: 2px
+			margin-top: 0
+			color: #666
+	.testimonials-desc
+		background-color: $blue
+		color: #fff
+		padding: 30px
+		margin-top: 50px
+		border-radius: 5px
+		position: relative
+		border-bottom: 5px solid $blue
+		+mt(.5s)
+		&::before
+			content: ''
+			@include triangle(32px, $blue, up)
+			position: absolute
+			top: -16px
+			transform: translateX(-16px)
+		h4 
+			font-size: 17px
+			text-transform: none
+			margin-top: 0
+			margin-bottom: 20px
+		p 
+			color: #eee4e4
+
+
+
+
 //ALWAYS END
 @import media
 

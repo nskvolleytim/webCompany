@@ -110,9 +110,20 @@ $(function() {
 
 
 	//EqulHeight JQuery plugin
-	$(".s-direct .item-vertical p").equalHeights();
-	$(".s-equipment .carousel-text p").equalHeights();
-	$(".s-callback .item-vertical-2 h3").equalHeights();
+	
+	function heightses() {
+		$(".s-direct .item-vertical p").height('auto').equalHeights();
+		$(".s-equipment .carousel-text p").height('auto').equalHeights();
+		$(".s-callback .item-vertical-2 h3").height('auto').equalHeights();
+		$(".s-testimonials .testimonials-head").height('auto').equalHeights();
+		$(".s-testimonials .testimonials-desc").height('auto').equalHeights();
+	}
+
+	heightses();
+
+	$(window).resize(function(){
+		heightses();
+	});
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
