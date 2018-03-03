@@ -2,19 +2,19 @@
 @import vars.sass
 
 *::-webkit-input-placeholder
-	color: #666
+	color: #222
 	opacity: 1
 
 *:-moz-placeholder
-	color: #666
+	color: #222
 	opacity: 1
 
 *::-moz-placeholder
-	color: #666
+	color: #222
 	opacity: 1
 
 *:-ms-input-placeholder
-	color: #666
+	color: #222
 	opacity: 1
 
 body input:focus:required:invalid,
@@ -519,14 +519,37 @@ body textarea:required:valid
 			color: #eee4e4
 
 
+.s-contacts-wrapper
+	margin-top: 40px
+	.map
+		margin:
+			top: 30px
+			bottom: 20px
+
+.contact-text
+	font-size: 16px
+	font-family: "OpenSansLight", sans-serif
+	p 
+		margin:
+			top: 0
+			bottom: 8px
+	.fa	
+		color: $accent
+		margin-right: 5px
+		font-size: 22px
+		width: 10px
+		text-align: center
+
+
 
 
 //ALWAYS END
 @import media
 
 //Load Libs SASS
-@import app/libs/animate/animate.sass
-@import app/libs/fontawesome/css/font-awesome.min.sass
-@import app/libs/magnific-popup/magnific-popup.sass
-@import app/libs/owl-carousel/assets/owl.carousel.sass
+@import "app/libs/animate/animate.sass"
+@import "app/libs/fontawesome/css/font-awesome.min.sass"
+@import "app/libs/magnific-popup/magnific-popup.sass"
+@import "app/libs/owl-carousel/assets/owl.carousel.sass"
+@import "app/libs/selectize/dist/css/selectize"
 

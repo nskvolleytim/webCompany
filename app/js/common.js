@@ -251,6 +251,6 @@ $(function() {
 	});
 
 
-
+	$("form select").selectize();
 
 });
