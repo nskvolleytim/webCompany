@@ -3,8 +3,13 @@ $(function() {
 	//toggle-menu-icon
 	$(".toggle-mnu").click(function() {
 	$(this).toggleClass("on");
-	$(".main-mnu").slideToggle();
+	$(this).parent().next().next().find(".main-mnu").slideToggle();
 	return false;
+	});
+
+	$(".main-foot .toggle-mnu").click(function() {
+		$("html, body").animate({scrollTop: $(document).height()}, "slow");
+		return false;
 	});
 
 	//mouse-icon scroll
@@ -91,13 +96,19 @@ $(function() {
 
 	});
 
-	$(".portfolio-item").magnificPopup({
+	$(".portfolio-item, a[href='#callback']").magnificPopup({
 		mainClass: 'my-mfp-zoom-in',
 		removalDelay: 300,
 		type: 'inline'
 
 	});
 
+//replacing header text of contact form
+	$("a[href='#callback']").click(function() {
+		var dataForm = $(this).data("form");
+		var datatext = $(this).data("text");
+		$(".form-callback h4").text(datatext);
+	});
 	
 
 
@@ -134,11 +145,13 @@ $(function() {
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			alert("Thank you!");
+			$(".form-callback .success ").addClass("active");
 			setTimeout(function() {
 				// Done Functions
+				$(".form-callback .success ").removeClass("active");
 				th.trigger("reset");
-			}, 1000);
+				$.magnificPopup.close();
+			}, 3000);
 		});
 		return false;
 	});
@@ -252,5 +265,21 @@ $(function() {
 
 
 	$("form select").selectize();
+
+	//scroll to top button
+	$("body").append('<div class="top"><i class="fa fa-angle-double-up"></i></div');
+
+	$("body").on("click", ".top", function() {
+		$("html, body").animate({scrollTop: 0}, "slow");
+	});
+
+
+	$(window).scroll(function() {
+		if($(this).scrollTop() > $(this).height()) {
+			$(".top").addClass("active");
+		} else {
+			$(".top").removeClass("active");
+		}
+	})
 
 });

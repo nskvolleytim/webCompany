@@ -38,7 +38,7 @@ b, strong
 	font-weight: normal
 
 .main-head
-	background-image: url(img/bg_top.jpg)
+	background-image: url(../img/bg_top.jpg)
 	min-height: 100vh
 	background-size: cover
 	background-position: top center
@@ -76,7 +76,6 @@ nav, .header-content
 				+mt(.5s)
 				&:hover
 					color: $blue
-					text-decoration: none
 			&.active
 				a
 					color: $blue
@@ -100,11 +99,12 @@ nav, .header-content
 		color: #7e91a4
 		font-size: 13px
 		border-bottom: 1px dashed #7e91a4
+		text-decoration: none
 		+mt(.5s)
 		&:hover
 			text-decoration: none
 			border-color: transparent
-
+		
 
 .toggle-mnu 
 	display: block
@@ -225,6 +225,8 @@ ul.home-list
 		box-shadow: 0 2px 0 darken($accent, 6%)
 	&:active, &:focus
 		background-color: darken($accent, 6%)
+		box-shadow: 0 2px 0 darken($accent, 6%)
+		
 	
 
 .button-gray
@@ -367,7 +369,7 @@ ul.home-list
 		text-align: center
 		h4
 			font-size: 18px
-			margin-top: 0
+			margin-top: 20px
 			margin-bottom: 10px
 		p 
 			color: #fff
@@ -424,3 +426,6 @@ form
 			font-size: 20px
 		&.dropdown-active::after
 			margin-top: -7px
+
+
+
