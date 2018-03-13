@@ -46,7 +46,14 @@ $(function() {
 		offset: '70%'
 		});
 
+	$(".gallery-tizer-wrap")
+		.attr("href", $(".gallery-images a").attr("href"))
+		.css("background-image", "url(" + $(".gallery-images a").data("preview") + ")");
+	$(".gallery-images a:first").remove();
 
+	$(".certificate-wrap > a")
+		.attr("href", $(".certificates a").attr("href"))
+	$(".certificates a:first").remove();
 
 	//magnific-popup gallery
 	$(".mfp-gallery").each(function(){
@@ -239,7 +246,7 @@ $(function() {
 
 
 
-	$(".carousel-eq").owlCarousel({
+	$(".ishome .carousel-eq").owlCarousel({
 		loop:true,
 		responsive:{
 			0:{

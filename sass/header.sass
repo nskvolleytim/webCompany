@@ -21,6 +21,17 @@ h1
 .ishome h1
 	margin-top: 0
 
+
+.isnohome
+	.main-head
+		min-height: 0
+		padding-bottom: 30px
+		border-bottom: darken(#E9F0F8, 2%) 3px solid
+	h1
+		margin-top: 0
+	.page
+		margin-top: 30px
+
 h2
 	font-size: 32px
 
@@ -429,3 +440,24 @@ form
 
 
 
+.isnohome .carousel-eq
+	text-align: center
+	.carousel-item
+		max-width: 280px
+		display: inline-block
+
+article
+	margin-bottom: 60px
+	img
+		width: 100%
+		max-width: 100%
+		height: auto
+	h1
+		a
+			text-decoration: none
+			font-family: "OpenSansRegular", sans-serif
+			color: $accent
+			&:hover, &:active, &:focus
+				color: $accent
+		small
+			color: #999
